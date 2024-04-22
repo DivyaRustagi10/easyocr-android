@@ -8,6 +8,7 @@ This project is a Python script that utilizes the EasyOCR library to extract tex
    ```
    pip install easyocr
    ```
+Read More: https://github.com/JaidedAI/EasyOCR
 
 2. Run the script by executing the following command:
    ```
