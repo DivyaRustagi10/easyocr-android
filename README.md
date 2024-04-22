@@ -13,13 +13,40 @@ This project is a Python script that utilizes the EasyOCR library to extract tex
    ```
    python easyOCR-android.py
    ```
+   
+   Note: This implementation assumes you have a CUDA-enabled GPU. Set flag to `gpu=false` to run in CPU-only mode.
+      ```
+      reader = easyocr.Reader(['en'], gpu=False)
+      ```
 
-3. The script will process the images located in the './content' directory and display the extracted text along with the processing time for each image.
+3. The script will process the images located in the './content' directory and display the extracted text along with the processing time for each image. The results will be saved in the ./results directory in text format, including the extracted text and processing time.
 
 ## Dependencies
-
+- pytorch
 - easyocr
 - pandas
+
+# Description
+
+## 1. Dependencies
+- **EasyOCR**: Used for optical character recognition (OCR).
+- **Pandas**: Employed for data handling and manipulation.
+
+## 2. Image Processing
+- Processes `.png` images located in the `./content` directory.
+- Utilizes EasyOCR to detect and extract text from these images.
+
+## 3. Data Handling
+- Converts extracted text and its bounding box coordinates into a pandas DataFrame.
+- Enhances the DataFrame by separating coordinates for the top-left and bottom-right corners of each bounding box.
+
+## 4. Performance Tracking
+- Records the time taken for each image's OCR process, from start to finish.
+- Monitors processing efficiency through recorded durations.
+
+## 5. Output
+- Generates a text file report for each processed image in the `./results` directory.
+- Each report contains the DataFrame (as a string) and the processing time.
 
 ## Author
 Divya Rustagi
