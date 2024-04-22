@@ -21,11 +21,16 @@ def process_image(image_path, reader):
 
 def main():
     reader = easyocr.Reader(['en'])  # Load the model into memory
-    image_paths = ['./content/android-sample-app.png', './content/clothes-list.png']
-    
+    image_paths = [os.path.join('./content', f) for f in os.listdir('./content') if f.endswith('.png')]  # Read all image files in the ./content folder
+
+    result_dir = './results'
+    if not os.path.exists(result_dir):
+        os.makedirs(result_dir)
+
     for i, image_path in enumerate(image_paths, start=1):
         df, processing_time = process_image(image_path, reader)  # Unpack the returned values
-        print(f"Result {i}")
+        image_name = os.path.basename(image_path)  # Get the image file name
+        print(f"Result {i} - {image_name}")
         print(df)
         print(f"Processing time for image {i}: {processing_time:.3f} seconds")  # Print processing time
         
@@ -33,14 +38,14 @@ def main():
         pd.set_option('display.max_rows', None)
         pd.set_option('display.max_columns', None)
         
-        # Write the DataFrame and processing time to a text file
-        output_file = f"result_{i}.txt"
+        # Write the DataFrame, image name, and processing time to a text file
+        output_file = os.path.join(result_dir, f"result_{i}.txt")
         with open(output_file, 'w') as file:
-            file.write(f"Result {i}\n\n")
+            file.write(f"Result {i} - {image_name}\n\n")
             file.write(df.to_string() + '\n\n')
             file.write(f"Processing time for image {i}: {processing_time:.3f} seconds")
 
-        print(f"Report for image {i} saved to {output_file}")
+        print(f"Report for image {i} ({image_name}) saved to {output_file}")
 
 if __name__ == "__main__":
     main()

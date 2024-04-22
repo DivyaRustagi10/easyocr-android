@@ -1,4 +1,4 @@
-Result 2
+Result 6 - screen2-clothes-list.png
 
                                                 Bounding Box                         Text  Confidence Bounding Box Top Left Bounding Box Bottom Right
 0                 [[22, 15], [157, 15], [157, 69], [22, 69]]                        12.59    0.997853              [22, 15]                 [157, 69]
@@ -18,4 +18,4 @@ Result 2
 14      [[496, 2853], [544, 2853], [544, 2898], [496, 2898]]                            0    0.999956           [496, 2853]               [544, 2898]
 15      [[447, 2934], [629, 2934], [629, 2999], [447, 2999]]                      Catalog    0.770762           [447, 2934]               [629, 2999]
 
-Processing time for image 2: 0.702 seconds
+Processing time for image 6: 0.604 seconds
