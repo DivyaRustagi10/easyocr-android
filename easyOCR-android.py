@@ -1,7 +1,7 @@
 # EasyOCR for Extracting Text from Android Mobile Screenshots
 import easyocr
 import pandas as pd
-import time  # Import the time module
+import time 
 import os  
 
 def process_image(image_path, reader):
