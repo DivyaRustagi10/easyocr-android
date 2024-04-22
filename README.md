@@ -49,4 +49,4 @@ This project is a Python script that utilizes the EasyOCR library to extract tex
 - Each report contains the DataFrame (as a string) and the processing time.
 
 ## Author
-Divya Rustagi
+Divya Rustagi (Supported by ChatGPT 🙂)
