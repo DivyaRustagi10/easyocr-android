@@ -2,6 +2,7 @@
 import easyocr
 import pandas as pd
 import time  # Import the time module
+import os  # Add this import at the top of your file
 
 def process_image(image_path, reader):
     start_time = time.time()  # Start time before processing the image
@@ -27,6 +28,19 @@ def main():
         print(f"Result {i}")
         print(df)
         print(f"Processing time for image {i}: {processing_time:.3f} seconds")  # Print processing time
+        
+        # Set display options to show all rows and columns
+        pd.set_option('display.max_rows', None)
+        pd.set_option('display.max_columns', None)
+        
+        # Write the DataFrame and processing time to a text file
+        output_file = f"result_{i}.txt"
+        with open(output_file, 'w') as file:
+            file.write(f"Result {i}\n\n")
+            file.write(df.to_string() + '\n\n')
+            file.write(f"Processing time for image {i}: {processing_time:.3f} seconds")
+
+        print(f"Report for image {i} saved to {output_file}")
 
 if __name__ == "__main__":
     main()
