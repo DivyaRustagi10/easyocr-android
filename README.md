@@ -1,4 +1,4 @@
-# easyOCR-android.py Project README
+# EasyOCR Android Project
 
 This project is a Python script that utilizes the EasyOCR library to extract text from Android mobile screenshots. It includes functions to process images, extract text, and display the results in a DataFrame.
 
