@@ -2,7 +2,7 @@
 import easyocr
 import pandas as pd
 import time  # Import the time module
-import os  # Add this import at the top of your file
+import os  
 
 def process_image(image_path, reader):
     start_time = time.time()  # Start time before processing the image
@@ -14,7 +14,7 @@ def process_image(image_path, reader):
     # Assuming 'Bounding Box' is structured as [top-left, top-right, bottom-right, bottom-left]
     df['Bounding Box Top Left'] = df['Bounding Box'].apply(lambda x: x[0])
     df['Bounding Box Bottom Right'] = df['Bounding Box'].apply(lambda x: x[2])
-    #df.drop('Bounding Box', axis=1, inplace=True)
+    # df.drop('Bounding Box', axis=1, inplace=True)
     end_time = time.time()  # End time after processing the image
     processing_time = end_time - start_time  # Calculate processing time
     return df, processing_time  # Return the DataFrame and the processing time
