@@ -21,14 +21,11 @@ This project is a Python script that utilizes the EasyOCR library to extract tex
 
 3. The script will process the images located in the './content' directory and display the extracted text along with the processing time for each image. The results will be saved in the ./results directory in text format, including the extracted text and processing time.
 
-## Dependencies
+## 1. Dependencies
 - pytorch
 - easyocr
 - pandas
 
-# Description
-
-## 1. Dependencies
 - **EasyOCR**: Used for optical character recognition (OCR).
 - **Pandas**: Employed for data handling and manipulation.
 
