@@ -21,24 +21,24 @@ This project is a Python script that utilizes the EasyOCR library to extract tex
 
 3. The script will process the images located in the './content' directory and display the extracted text along with the processing time for each image. The results will be saved in the ./results directory in text format, including the extracted text and processing time.
 
-## 1. Dependencies
+## Dependencies
 - pytorch
 - easyocr
 - pandas
 
-## 2. Image Processing
+## Image Processing
 - Processes `.png` images located in the `./content` directory.
 - Utilizes EasyOCR to detect and extract text from these images.
 
-## 3. Data Handling
+## Data Handling
 - Converts extracted text and its bounding box coordinates into a pandas DataFrame.
 - Enhances the DataFrame by separating coordinates for the top-left and bottom-right corners of each bounding box.
 
-## 4. Performance Tracking
+## Performance Tracking
 - Records the time taken for each image's OCR process, from start to finish.
 - Monitors processing efficiency through recorded durations.
 
-## 5. Output
+## Output
 - Generates a text file report for each processed image in the `./results` directory.
 - Each report contains the DataFrame (as a string) and the processing time.
 
