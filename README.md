@@ -26,9 +26,6 @@ This project is a Python script that utilizes the EasyOCR library to extract tex
 - easyocr
 - pandas
 
-- **EasyOCR**: Used for optical character recognition (OCR).
-- **Pandas**: Employed for data handling and manipulation.
-
 ## 2. Image Processing
 - Processes `.png` images located in the `./content` directory.
 - Utilizes EasyOCR to detect and extract text from these images.
